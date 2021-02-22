@@ -39,20 +39,20 @@ function setBgGreet() {
 
   if (hour < 12) {
     // Morning
-    document.body.style.backgroundImage = "url('../img/morning.jpg')";
+    document.body.style.backgroundImage = "url('./img/morning.jpg')";
     greeting.textContent = 'Good Morning, ';
     document.body.style.color = 'white';
 
   } else if (hour < 18) {
     // Afternoon
-    document.body.style.backgroundImage = "url('../img/afternoon.jpg')";
+    document.body.style.backgroundImage = "url('./img/afternoon.jpg')";
     greeting.textContent = 'Good Afternoon, ';
     document.body.style.color = 'white';
 
 
   } else {
     // Evening
-    document.body.style.backgroundImage = "url('../img/night.jpg')";
+    document.body.style.backgroundImage = "url('./img/night.jpg')";
     greeting.textContent = 'Good Evening, ';
     document.body.style.color = 'white';
   }
@@ -72,11 +72,11 @@ function setName(e) {
   if (e.type === 'keypress') {
     // Make sure enter is pressed
     if (e.which == 13 || e.keyCode == 13) {
-      localStorage.setItem('name' + '.', e.target.innerText);
+      localStorage.setItem('name', e.target.innerText);
       name.blur();
     }
   } else {
-    localStorage.setItem('name' + '.', e.target.innerText);
+    localStorage.setItem('name', e.target.innerText);
   }
 }
 
